@@ -1,0 +1,14 @@
+<image src="https://www.gnu.org/graphics/gplv3-127x51.png">
+
+# YouTube Video Downloader Written In Python!
+
+<image src="video_downloader.png">
+
+##How to use:
+1. **Copy and Paste an video URL.**
+2. **Click in the "Download" button.**
+3. **Entry in the Downloads path generated and see your video!**
+
+## License
+Distributed under the [GPL3 License](https://www.gnu.org/licenses/gpl-3.0.en.html#license-text).
+
