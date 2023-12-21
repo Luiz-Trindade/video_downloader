@@ -4,7 +4,7 @@
 
 <image src="video_downloader.png">
 
-##How to use:
+## How to use:
 1. **Copy and Paste an video URL.**
 2. **Click in the "Download" button.**
 3. **Entry in the Downloads path generated and see your video!**
