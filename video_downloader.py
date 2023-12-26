@@ -4,8 +4,10 @@
 # GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
 
 from customtkinter import *
-from pytube import YouTube
-from plyer import notification
+#from pytube import YouTube
+#from plyer import notification
+import yt_dlp
+from PySimpleGUI import popup_quick_message as alert
 
 def Main():
     app = CTk()
@@ -14,14 +16,36 @@ def Main():
     set_default_color_theme("green")
 
     def Download():
-        try:
+        '''try:
             video_url = video_link.get()
             yt = YouTube(video_url)
             video = yt.streams.get_highest_resolution()
             video.download("Downloads")
-            notification.notify("Video Downloader", "vídeo baixado com sucesso!")
+            notification.notify(
+                title="Video Downloader", 
+                message="vídeo baixado com sucesso!",
+                timeout=5
+            )
         except:
-            notification.notify("Video Downloader", "Erro ao fazer o download do vídeo!") 
+            notification.notify(
+                title="Video Downloader", 
+                message="Erro ao fazer o download do vídeo!",
+                timeout=5
+            )''' 
+
+        try:
+            video_url = video_link.get()
+            options = {
+                "format":"bestvideo+bestaudio/best",
+                "outtmpl":"%(title)s.%(ext)s",
+                "merge_output_format":"mp4"
+            }
+            with yt_dlp.YoutubeDL(options) as ydl:
+                ydl.download([video_url])
+            alert("Vídeo baixado com sucesso!", font=("Arial", 30, "bold"))
+        except Exception as error:
+            alert(f"{error}", font=("Arial", 30, "bold"))
+            #print(f"{error}")
 
     video_link = CTkEntry(master=app, font=("Arial", 20), width=400, height=50)
     video_link.pack(pady=50, padx=50)
