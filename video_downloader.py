@@ -6,17 +6,21 @@
 from customtkinter import *
 from PySimpleGUI import popup_quick_message as alert
 from yt_dlp import YoutubeDL
+from tkinter import ttk, PhotoImage as PI
 
 def Main():
     app = CTk()
     app.title("Video Downloader 🎥")
-    app.geometry("500x350")
+    app.geometry("600x400")
     set_default_color_theme("green")
+    set_widget_scaling(1.2)
 
     tabview = CTkTabview(master=app)
     tabview.pack(pady=10, padx=10)
     tab1 = tabview.add("Download")
     tab2 = tabview.add("About")
+
+    icon_image = PI(file="icon.png")
 
     def Download():
         video_url = video_link.get()
@@ -31,11 +35,17 @@ def Main():
         except Exception as error:
             alert(f"{error}", font=("Arial", 30, "bold"))
 
+    icon1 = CTkLabel(master=tab1, image=icon_image, text=None)
+    icon1.pack()
+
     video_link = CTkEntry(master=tab1, placeholder_text="Video Link" ,font=("Arial", 20), width=400, height=50, justify="center")
-    video_link.pack(pady=50, padx=50)
+    video_link.pack(pady=20, padx=10)
 
     download_button = CTkButton(master=tab1, font=("Arial", 35, "bold"), text="Download ⬇️ ", hover_color="orange", command=Download)
-    download_button.pack(pady=40, padx=50)
+    download_button.pack(pady=30, padx=10)
+
+    icon2 = CTkLabel(master=tab2, image=icon_image, text=None)
+    icon2.pack()
 
     about_text = """
     -'Video Downloader' is a program that is
