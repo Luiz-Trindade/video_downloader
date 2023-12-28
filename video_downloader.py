@@ -20,7 +20,7 @@ def Main():
     tab1 = tabview.add("Download")
     tab2 = tabview.add("About")
 
-    icon_image = PI(file="icon.png")
+    icon_image = PI(file="_internal/icons/icon.png")
 
     def Download():
         video_url = video_link.get()
