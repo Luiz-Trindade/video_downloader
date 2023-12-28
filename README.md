@@ -5,7 +5,7 @@
 <image src="screenshots/video_downloader1.png">
 <image src="screenshots/video_downloader2.png">
 
-##How to use:
+## How to use:
 1. **Copy and Paste an video URL.**
 2. **Click in the "Download" button.**
 3. **Entry in the Downloads path generated and see your video!**
