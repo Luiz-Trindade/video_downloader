@@ -6,7 +6,7 @@
 from customtkinter import *
 from PySimpleGUI import popup_quick_message as alert
 from yt_dlp import YoutubeDL
-from tkinter import ttk, PhotoImage as PI
+from tkinter import ttk, PhotoImage as PI, filedialog
 
 def Main():
     app = CTk()
@@ -24,9 +24,13 @@ def Main():
 
     def Download():
         video_url = video_link.get()
+
+        output_path = filedialog.askdirectory(title="Select the destination path")
+        
         try:
             options = {
-                "format":"bestvideo[ext=mp4]+bestaudio[ext=mp4a]/best[ext=mp4]/best"
+                "format":"bestvideo[ext=mp4]+bestaudio[ext=mp4a]/best[ext=mp4]/best",
+                "outtmpl":f"{output_path}/%(title)s.%(ext)s"
             }
             with YoutubeDL(options) as ydl:
                 info = ydl.extract_info(video_url, download=True)
