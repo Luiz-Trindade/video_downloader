@@ -1,7 +1,22 @@
-# Simple YouTube Video Downloader written in Python.
-# Created By: Luiz Gabriel Magalhães Trindade.
-# Distributed Under The GPL3 License.
-# GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
+'''
+    Simple YouTube Video Downloader Written In Python!
+    GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
+
+    Copyright (C) 2024  Luiz Gabriel Magalhães Trindade.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+'''
 
 from customtkinter import *
 from PySimpleGUI import popup_quick_message as alert
@@ -26,7 +41,7 @@ def Main():
         video_url = video_link.get()
 
         output_path = filedialog.askdirectory(title="Select the destination path")
-        
+
         try:
             options = {
                 "format":"bestvideo[ext=mp4]+bestaudio[ext=mp4a]/best[ext=mp4]/best",
@@ -35,7 +50,7 @@ def Main():
             with YoutubeDL(options) as ydl:
                 info = ydl.extract_info(video_url, download=True)
             alert(f"Vídeo baixado com sucesso!", font=("Arial", 30, "bold"))
-            
+
         except Exception as error:
             alert(f"{error}", font=("Arial", 30, "bold"))
 
@@ -54,12 +69,12 @@ def Main():
     about_text = """
     -'Video Downloader' is a program that is
     written in the python programing language.
-    -That program was designed to be simple and 
+    -That program was designed to be simple and
     functional.
 
     -Copy and Paste the link and Download the Video!
 
-    -Created By: Luiz Gabriel Magalhães Trindade. 
+    -Created By: Luiz Gabriel Magalhães Trindade.
     (Computer Science Student)
     -Distributed Under The GPL3 License.
     """
