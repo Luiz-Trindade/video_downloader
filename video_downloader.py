@@ -38,7 +38,7 @@ def Main():
     tab2 = tabview.add("Audio🎵")
     tab3 = tabview.add("About")
 
-    alert_sound = ("_internal/alert_sound.mp3")
+    alert_sound = ("_internal/sound/alert_sound.mp3")
     pg.mixer.music.load(alert_sound)
     
     def Alert(msg):
