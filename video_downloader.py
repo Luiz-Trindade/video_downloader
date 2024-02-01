@@ -31,6 +31,8 @@ def Main():
     set_widget_scaling(1.2)
 
     icon_image = PI(file="_internal/icons/icon.png")
+    #Set the app icon
+    app.iconphoto(False, icon_image)
 
     tabview = CTkTabview(master=app)
     tabview.pack(pady=30, padx=10)
