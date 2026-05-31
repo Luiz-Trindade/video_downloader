@@ -1,0 +1,164 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dll
+*.exe
+
+# C extensions
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.~*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+
+# yt-dlp / youtube-dl temporary files
+*.part
+*.ytdl
+*.temp
+*.temp-*
+.cache/
+cache/
+youtube-dl.cache
+yt-dlp.cache
+
+# Downloaded media (if any user downloads inside project folder)
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.flv
+*.webm
+*.m4a
+*.ogg
+*.wav
+
+# CustomTkinter / Tkinter generated
+*.tcl
+pyvenv.cfg
+
+# Pygame mixer cache
+pygame_cache/
+*.ogg.tmp
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# Project specific (keep assets but ignore any accidental generated files)
+_internal/icons/*.bak
+_internal/sound/*.bak
+screenshots/*.bak
+
+# Local configuration (e.g., user settings, if any)
+config.local.py
+settings.local.py
+*.local.py
